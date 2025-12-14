@@ -1,6 +1,6 @@
-# OSS RAG Lab (100% Free & Local)
+# OSS RAG Lab 
 
-This is a **fully local, free, open-source RAG project** built with:
+This is a **open-source RAG project** built with:
 
 - 🧠 **LLM:** [Ollama](https://ollama.com/) running an open-source model (default: `llama3`)
 - 🔎 **Retrieval:** BM25 + vector store (Chroma)
