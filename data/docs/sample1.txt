@@ -1,0 +1,9 @@
+OSS RAG Lab is a demo project that showcases retrieval augmented generation using
+only local, open-source tooling such as Ollama and LangChain.
+
+It supports multiple pipelines:
+- BM25 lexical retrieval
+- Vector retrieval using local embeddings
+- A hybrid of both approaches
+
+The system also collects user feedback on answer quality and exposes simple metrics.

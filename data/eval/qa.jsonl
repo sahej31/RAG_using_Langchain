@@ -1,0 +1,1 @@
+{"question": "What is retrieval augmented generation (RAG)?", "answer": "A pattern where a language model is given external context retrieved based on the user's query."}\n{"question": "Which retrieval pipelines does this project support?", "answer": "BM25, vector retrieval, and a hybrid of both."}\n

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OSS RAG Lab</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>OSS RAG Lab</h1>
+        <p class="subtitle">
+          100% local & free RAG with multiple pipelines, feedback & simple analytics.
+        </p>
+        <p class="model">Ollama model: {{ model_name }}</p>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>Ask a question</h2>
+          <label for="pipeline">Pipeline</label>
+          <select id="pipeline">
+            <option value="hybrid">Hybrid (BM25 + Vector)</option>
+            <option value="bm25">BM25 only</option>
+            <option value="vector">Vector only</option>
+          </select>
+
+          <label for="question">Question</label>
+          <textarea
+            id="question"
+            rows="3"
+            placeholder="Ask something based only on your local documents..."
+          ></textarea>
+
+          <button id="ask-btn">Ask</button>
+
+          <div id="status"></div>
+        </section>
+
+        <section class="card" id="answer-card" style="display: none">
+          <h2>Answer</h2>
+          <pre id="answer"></pre>
+
+          <div class="feedback-row">
+            <span>Was this helpful?</span>
+            <button id="thumb-up">👍</button>
+            <button id="thumb-down">👎</button>
+            <span id="feedback-status"></span>
+          </div>
+
+          <details>
+            <summary>Show retrieved context</summary>
+            <div id="context"></div>
+          </details>
+        </section>
+
+        <section class="card">
+          <h2>Pipeline Metrics (Feedback)</h2>
+          <button id="refresh-metrics">Refresh metrics</button>
+          <div id="metrics"></div>
+        </section>
+
+        <section class="card warning">
+          <h2>Setup checklist</h2>
+          <ol>
+            <li>Install and run <code>ollama</code>.</li>
+            <li>Run: <code>ollama pull llama3</code> and <code>ollama pull nomic-embed-text</code>.</li>
+            <li>Put .txt docs inside <code>data/docs</code>.</li>
+            <li>Run: <code>python -m app.rag.indexer</code> once.</li>
+          </ol>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/main.js"></script>
+  </body>
+</html>

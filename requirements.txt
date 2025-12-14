@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+
+langchain
+langchain-community
+chromadb
+
+sqlalchemy
+pydantic
+python-dotenv
+
+tiktoken
